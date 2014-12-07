@@ -11,28 +11,23 @@ function wpptm_update_post_type_meta() {
 		/* get the current post type */
 		$post_type = $_GET[ 'post_type' ];
 
-		/* check we have settings to update */
-		if( ! empty( $wpptm_settings ) ) {
+		/* loop through each setting added */
+		foreach( $_POST as $key => $value ) {
 			
-			/* loop through each setting added */
-			foreach( $_POST as $key => $value ) {
-				
-				/* if the key is either the post type or the save button */
-				if( $key == 'wpptm_post_type' || $key == 'wpptm_update_metainfo' )
-					continue;
-				
-				/* get the current saved values from options */
-				$wpptm_options = get_option( 'wpptm_meta' );
-								
-				/* add our posted setting to the options array */
-				$wpptm_options[ $key ] = $value;
+			/* if the key is either the post type or the save button */
+			if( $key == 'wpptm_post_type' || $key == 'wpptm_update_metainfo' )
+				continue;
+			
+			/* get the current saved values from options */
+			$wpptm_options = get_option( 'wpptm_meta' );
+							
+			/* add our posted setting to the options array */
+			$wpptm_options[ $key ] = $value;
 
-				/* update this setting */
-				update_option( 'wpptm_meta', $wpptm_options );
-				
-			} // end loop through each setting
+			/* update this setting */
+			update_option( 'wpptm_meta', $wpptm_options );
 			
-		} // end if have settings to update
+		} // end loop through each setting
 
 		/* redirect the user to meta admin page with added query vars */
 		wp_redirect(
