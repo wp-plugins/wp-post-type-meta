@@ -4,7 +4,7 @@ Donate link: http://markwilkinson.me/saythanks
 Tags: custom post type, meta, options
 Requires at least: 4.0
 Tested up to: 4.0.1
-Stable tag: 0.3
+Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -87,6 +87,9 @@ In the above example if the custom post type was called `cpt_content` you would 
 None yet!
 
 == Changelog ==
+
+= 0.4 =
+* Add post type meta menu item to all post types not just public ones.
 
 = 0.3 =
 * Changed the way in which meta values are saved. Less complex now!
