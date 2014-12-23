@@ -152,7 +152,7 @@ function wpptm_metainfo_content() {
 										default:
 										
 											?>
-											<input type="text" name="<?php echo $post_type->name . '_' . $setting[ 'id' ]; ?>" id="<?php echo esc_attr( $setting[ 'id' ] ); ?>" class="regular-text" value="<?php echo get_option( $current_setting ) ?>" />
+											<input type="text" name="<?php echo $post_type->name . '_' . $setting[ 'id' ]; ?>" id="<?php echo esc_attr( $setting[ 'id' ] ); ?>" class="regular-text" value="<?php echo $current_setting ?>" />
 											<?php
 										
 									} // end switch statement
