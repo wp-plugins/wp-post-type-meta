@@ -51,6 +51,13 @@ function wpptm_metainfo_content() {
 						/* loop through each setting */
 						foreach( $wpptm_settings as $setting ) {
 							
+							/* get the setting post type */
+							$setting_post_type = $setting[ 'post_types' ];
+							
+							/* check this setting should be shown on this post type */
+							if( ! in_array( $post_type->name, $setting_post_type ) )
+								continue;
+							
 							?>
 					    	<tr class="wpptm-setting wpptm-setting-<?php echo esc_attr( $post_type->name . '_' . $setting[ 'id' ] ); ?>">
 					    		<th>

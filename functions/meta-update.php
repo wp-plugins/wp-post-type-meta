@@ -10,7 +10,7 @@ function wpptm_update_post_type_meta() {
 	
 		/* get the current post type */
 		$post_type = $_GET[ 'post_type' ];
-
+			
 		/* loop through each setting added */
 		foreach( $_POST as $key => $value ) {
 			
