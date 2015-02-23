@@ -85,7 +85,7 @@ In the above example if the custom post type was called `cpt_content` you would 
 
 == Screenshots ==
 
-None yet!
+1. The post type meta screen shows all the fields added to this post type.
 
 == Changelog ==
 
